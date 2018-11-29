@@ -1,7 +1,6 @@
 # bettermotherf---website
 
-sorry for the name
 
-this is for my "lessons"
+voila le lien, bande d'impolis
 
-my teachers are MOOFACEDs, need more respect for their mommies
+https://gui38.github.io/bettermotherf---website/
