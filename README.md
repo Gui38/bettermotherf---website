@@ -3,4 +3,4 @@
 
 voila le lien, bande d'impolis
 
-https://gui38.github.io/bettermotherf---website/
+https://gui38.github.io/thp_m---website/
