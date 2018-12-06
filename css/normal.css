@@ -1,0 +1,11 @@
+
+body {
+  color: #555;
+  background-color: #EEE;
+}
+
+.insult {
+  color: #F5E;
+  font-family: calibri, sans-serif;
+  cursor: grab;
+}

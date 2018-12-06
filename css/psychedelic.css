@@ -1,0 +1,23 @@
+
+body {
+  color: #555;
+  background-color: #F7E;
+}
+
+.insult {
+  color: #FFF;
+  font-family: chiller, cursive, sans-serif;
+  cursor: grab;
+}
+
+p  {
+  color: blue;
+  font-family: papyrus, cursive, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: #0F3;
+  font-family: "Comic Sans", chiller, cursive, sans-serif;
+}
