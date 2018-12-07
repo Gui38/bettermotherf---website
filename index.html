@@ -152,7 +152,8 @@
 
   </body>
 
-  <script type="text/javascript" src="js/js.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 
   <script type="text/javascript">
 
@@ -168,10 +169,16 @@ window.onload =
       if ( lubrique ) {
         window.location.href = "https://www.youtube.com/watch?v=nF35_bqqU-E&t=60s";
       } else {
-        alert("dommage, tu ne sais pas ce que tu rates =)")
+        //alert("dommage, tu ne sais pas ce que tu rates =)")
+        //c'est casse c* en fait
       }
     },
     10000);
+
+  uploadVideo(); //la flemme de la mettre en lazy load
+  //j'apprendrais ça plus tard
+  //pour l'instant je me contente de la charger a la fin
+  // sinon bah ca retarde l'arrivée des insultes =)
 
 }
 

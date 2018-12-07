@@ -2,16 +2,27 @@
 
 // When the user clicks on <span> (x), close the modal
 document.getElementById("closeModal").onclick = function() {
-    document.getElementById('modal').style.display = "none";
+  closeModal();
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == document.getElementById('modal')) {
-        document.getElementById('modal').style.display = "none";
-    }
+  if (event.target == document.getElementById('modal')) {
+    closeModal();
+  }
 }
 
+function closeModal () {
+  //document.getElementById("youtubeVideo")
+    //.stopVideo();
+  document.getElementById("youtubeVideo")
+    .contentWindow.postMessage(
+      '{"event":"command","func":"' +
+      'stopVideo' +
+      '","args":""}',
+      '*')
+  document.getElementById('modal').style.display = "none";
+}
 
 var insults = {}
 
@@ -64,7 +75,15 @@ insults.change = function () {
 for (var i=0; i<insults.spans.length; i++) {
   var insult = insults.spans[i];
   insult.onclick = function () {
+    // affiche la modale
     document.getElementById('modal').style.display = "block";
+    // lance la video
+    document.getElementById("youtubeVideo")
+      .contentWindow.postMessage(
+        '{"event":"command","func":"' +
+        'playVideo' +
+        '","args":""}',
+        '*')
   }
 };
 
@@ -90,14 +109,17 @@ css.change = function () {
 
 var videoLink = "TBx9Y3-9OFQ"
 
-document.getElementById("youtubeInsults")
-  .addEventListener( "click", function() {
-    var iframe = document.createElement( "iframe" );
-    iframe.setAttribute( "frameborder", "0" );
-    iframe.setAttribute( "allowfullscreen", "" );
-    iframe.setAttribute( "src", "https://www.youtube.com/embed/"+
-      videoLink +"?rel=0&showinfo=0&autoplay=1" );
+function uploadVideo () {
+  var iframe = document.createElement( "iframe" );
+  iframe.id = "youtubeVideo";
+  iframe.width = 560;
+  iframe.height = 315;
+  iframe.setAttribute( "frameborder", "0" );
+  iframe.setAttribute( "allowfullscreen", "" );
+  iframe.setAttribute( "src", "https://www.youtube.com/embed/"+
+    videoLink +"?rel=0&showinfo=0&autoplay=1&version=3&enablejsapi=1" );
 
-    this.innerHTML = "";
-    this.appendChild(iframe);
-});
+  videoDiv = document.getElementById("youtubeInsults");
+  videoDiv.innerHTML = "";
+  videoDiv.appendChild(iframe);
+};
