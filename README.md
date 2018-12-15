@@ -1,6 +1,6 @@
 # bettermotherf---website
 
 
-voila le lien, bande d'impolis
+voila le lien :::
 
-https://gui38.github.io/thp_m---website/
+https://gui3.github.io/thp_m---website/
